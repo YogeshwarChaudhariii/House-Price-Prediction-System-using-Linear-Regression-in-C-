@@ -11,6 +11,12 @@ const string PREDICTIONS_FILE = "predictions.csv";
 
 const int MAX_LOCATIONS = 50;
 
+///////////////////////////////////////////////////////////////
+//
+// Structure : House
+// Use : Holds information about house data
+//
+///////////////////////////////////////////////////////////////
 struct House
 {
     float area;
@@ -21,6 +27,11 @@ struct House
     float price;
 };
 
+///////////////////////////////////////////////////////////////
+//
+// Class : RegressionModel
+//
+///////////////////////////////////////////////////////////////
 class RegressionModel
 {
 private:
@@ -501,4 +512,5 @@ int main()
         
 
     return 0;
+
 }
