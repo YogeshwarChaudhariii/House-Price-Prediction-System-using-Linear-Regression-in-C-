@@ -286,20 +286,20 @@ public:
 
         for(i = 0; i <= m; i++)
         {
-            for(j = 0; j<=m; j++) 
+            for(j = 0; j <= m; j++) 
             {
-                aug[i][j]=XtX[i][j];
-                aug[i][m+1] = XtY[i];
+                aug[i][j] = XtX[i][j];
+                aug[i][m + 1] = XtY[i];
             }
         }
 
-        for(i = 0; i<=m ; i++)
+        for(i = 0; i <= m; i++)
         {
-            for(k = i+1; k<= m; k++)
+            for(k = i + 1;k <= m;k++)
             {
                 if(fabs(aug[k][i]) > fabs(aug[i][i]))
                 {
-                    for(t = 0; t <= m+1; t++)
+                    for(t = 0; t <= m + 1;t++)
                     {
                         swap(aug[i][t], aug[k][t]);
                     }
@@ -313,18 +313,18 @@ public:
                 continue;
             }
 
-            for(j = i;j <= m+1; j++) 
+            for(j = i;j <= m + 1; j++) 
             {
-                aug[i][j]/=diag;
+                aug[i][j] /= diag;
             }
 
             for(k = 0;k <= m; k++)
             {
-                if(k!=i)
+                if(k != i)
                 {
                     float factor = aug[k][i];
 
-                    for(j = i; j <= m+1; j++) 
+                    for(j = i; j <= m + 1; j++) 
                     {
                         aug[k][j] -= factor*aug[i][j];
                     }
@@ -334,7 +334,7 @@ public:
 
         for(i = 0; i <= m; i++) 
         {
-            coefficients[i]=aug[i][m+1];
+            coefficients[i] = aug[i][m + 1];
         }
             trained = true;
 
@@ -514,3 +514,4 @@ int main()
     return 0;
 
 }
+
