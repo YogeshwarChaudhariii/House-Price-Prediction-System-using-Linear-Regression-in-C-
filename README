@@ -1,0 +1,101 @@
+About Project:
+
+Project Name: House Price Prediction System using Linear Regression in C++.
+Author: Yogeshwar Prakash Chaudhari.
+File Name: Final.cpp
+
+////////////////////////////////////////////////////////////////////////
+//
+// Project Description:
+//
+////////////////////////////////////////////////////////////////////////
+
+1) This project is a C++ based console application that predicts house prices using a Multiple Linear Regression model. 
+  The system learns from historical housing data (area, number of bedrooms, bathrooms, age of the house, and location) and builds 
+  a regression model to estimate property prices.
+
+2) The program supports importing and exporting data in CSV format, training the model on historical data, and predicting prices 
+   for new houses entered by the user. All predictions and data are saved for future reference.
+
+////////////////////////////////////////////////////////////////////////
+//
+// Key Features:
+//
+////////////////////////////////////////////////////////////////////////
+
+1) Data Management
+Load housing data from a CSV file.
+Add new house records manually.
+Store historical data persistently in historical_data.csv.
+
+2) Linear Regression Training
+Uses the Ordinary Least Squares (OLS) method to compute regression coefficients.
+
+ Considers multiple factors:
+    Area (sq. ft.)
+    Bedrooms
+    Bathrooms
+    Age of the house
+    Location score (numerical encoding of city/locality).
+
+3) Prediction
+Given new house details, the model predicts the price.
+Predictions are saved in predictions.csv.
+Outputs result in Indian Rupees.
+
+4) User Interface
+Console menu system for easy navigation.
+Options: Load data, Add data, Display data, Train model, Predict prices, Exit.
+
+5) Dynamic Memory Handling
+Expands dataset dynamically when new houses exceed capacity.
+Manages memory safely with constructors and destructors.
+
+////////////////////////////////////////////////////////////////////////
+//
+// Technologies Used:
+//
+////////////////////////////////////////////////////////////////////////
+
+1) Programming Language: C++
+
+2) Concepts Applied:
+Object-Oriented Programming (OOP)
+Dynamic memory allocation
+File handling (CSV read/write)
+Multiple Linear Regression (OLS method)
+
+3) Data Format: CSV
+
+////////////////////////////////////////////////////////////////////////
+//
+// Workflow:
+//
+////////////////////////////////////////////////////////////////////////
+
+1) Data Loading
+Read past house records from CSV files.
+
+2) Training Phase
+Build regression model by calculating coefficients using matrix operations (XtX and XtY).
+
+3) Prediction Phase
+Take input for a new house.
+Apply trained coefficients to predict price.
+
+4) Output
+Show predicted price on console.
+Store prediction in predictions.csv.
+
+////////////////////////////////////////////////////////////////////////
+//
+// Learning Outcomes:
+//
+////////////////////////////////////////////////////////////////////////
+
+Hands-on experience with Data Structures and Dynamic Arrays in C++.
+Implementation of a Machine Learning concept (Linear Regression) from scratch without external libraries.
+Practice in file handling and data persistence.
+Understanding of how location, size, and features affect property prices.
+
+This project demonstrates how machine learning concepts can be implemented in pure C++, bridging theoretical knowledge with practical, real-world applications.
