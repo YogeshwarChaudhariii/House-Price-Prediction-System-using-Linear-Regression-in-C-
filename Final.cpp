@@ -430,16 +430,39 @@ int main()
 
         if(iChoice == 1)
         {
+            system("cls");
+
             string filename;
 
-            cout << "Enter CSV filename: "; 
-            getline(cin, filename);
+            cout << "1. Load from exisiting file (historical_data.csv)\n";
+            cout << "2. Load from new CSV file\n";
+            cout << "Enter your choice: ";
+            cin >> iChoice;
+            cin.ignore(); 
 
-            model.LoadCSV(filename);
+            if (iChoice == 1)
+            {
+                model.LoadCSV("historical_data.csv");
+            }
+
+            else if (iChoice == 2)
+            {
+                cout << "Enter CSV filename: "; 
+                getline(cin, filename);
+
+                model.LoadCSV(filename);
+            }
+
+            else
+            {
+                cout << "Invalid choice!\n";
+            }
         }
 
         else if (iChoice == 2)
         {
+            system("cls");
+
             House h;
 
             cout << "Enter area (sq ft): "; 
@@ -463,16 +486,20 @@ int main()
 
         else if (iChoice == 3)
         {
+            system("cls");
             model.DisplayData();
         }
 
         else if (iChoice == 4)
         {
+            system("cls");
             model.Train();
         }
 
         else if (iChoice == 5)
         {
+            system("cls");
+
             House h;
 
             cout << "Enter area (sq ft): "; 
@@ -514,4 +541,5 @@ int main()
     return 0;
 
 }
+
 
